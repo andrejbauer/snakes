@@ -5,7 +5,7 @@ from snake import *
 COLOR_HEAD = '#197575'
 COLOR_TAIL = '#FFFF00'
 
-class BolivianAnaconda(Snake):
+class GrandCanyonRattlesnake(Snake):
     def __init__(self, field, x, y, dx, dy):
         # Poklicemo konstruktor nadrazreda
         Snake.__init__(self,

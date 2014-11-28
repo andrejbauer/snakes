@@ -19,7 +19,7 @@ from grandCanyonRattlesnake import GrandCanyonRattlesnake
 SNAKES = [
     BolivianAnaconda,
     CongoWaterCobra,
-    GrandCanyonRattlesnake,
+    GrandCanyonRattlesnake
 
 ]
 
