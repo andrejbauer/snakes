@@ -3,7 +3,9 @@ from snake import *
 
 # Barva glave in repa
 COLOR_HEAD = '#CC00CC'
-COLOR_TAIL = '#00FF00'
+COLOR_TAIL = '#CC00CC'
+
+
 
 class WolfSnake(Snake):
     def __init__(self, field, x, y, dx, dy):
@@ -27,9 +29,48 @@ class WolfSnake(Snake):
            * spisek vseh kac je self.field.snakes
         """
 
-        print(self.coords[0] ,self.dx,self.dy, self.field.width,self.field.height)
-        if self.coords[0][0]%2==0:
-            self.turn_left()
+        #print(self.coords[0] ,self.dx,self.dy, self.field.width,self.field.height)
+        mis=list(self.field.mice.keys())
+        x=self.coords[0][0]
+        y=self.coords[0][1]
+        mx=1000
+        my=1000
+        for (tx,ty) in mis:
+            if abs(x-tx)+abs(y-ty)<abs(x-mx)+abs(y-my):
+                mx=tx
+                my=ty
+        print(self.coords)
+
+        #print(mx,my)
+        if self.coords[0][0] < mx:
+            if self.dx!=1:
+                if random.randint(0,10) < 5:
+                    if random.randint(0,1) == 1:
+                        self.turn_left()
+                    else:
+                        self.turn_right()
+            
+
+        elif self.coords[0][0] > mx:
+            if self.dx!=-1:
+                if random.randint(0,10) < 5:
+                    if random.randint(0,1) == 1:
+                        self.turn_left()
+                    else:
+                        self.turn_right()
         else:
-            self.turn_right()
+            if self.coords[0][1] < my:
+                if self.dy!=1:
+                    if random.randint(0,10) < 5:
+                        if random.randint(0,1) == 1:
+                            self.turn_left()
+                        else:
+                            self.turn_right()
+            elif self.coords[0][1] > my:
+                if self.dy!=-1:
+                    if random.randint(0,10) < 5:
+                        if random.randint(0,1) == 1:
+                            self.turn_left()
+                        else:
+                            self.turn_right()
         
