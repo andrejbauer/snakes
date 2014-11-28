@@ -26,9 +26,20 @@ class himehabu(Snake):
            * spisek koordinat vseh misk je self.field.mice.keys()
            * spisek vseh kac je self.field.snakes
         """
-           
-        if random.randint(0,10) < 5:
-            if random.randint(0,1) == 1:
+        if self.field.is_empty((self.coords[0])[0] + self.dx, (self.coords[0])[1] + self.dy):
+            if random.randint(0,50) == 0:
+                if random.randint(0,1) == 1:
+                    self.turn_left()
+                else:
+                    self.turn_right()
+        else:
+            if self.field.is_empty((self.coords[0])[0] - self.dy, (self.coords[0])[1] + self.dx):
                 self.turn_left()
-            else:
+            elif self.field.is_empty((self.coords[0])[0] + self.dy, (self.coords[0])[1] - self.dx):
                 self.turn_right()
+            else:    
+                if random.randint(0,1) == 1:
+                    self.turn_left()
+                else:
+                    self.turn_right()
+            
