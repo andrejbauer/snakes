@@ -30,6 +30,7 @@ from blueKrait import BlueKrait
 from nitschesTreeViper import NitschesTreeViper
 from egyptianCobra import EgyptianCobra
 
+
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
 SNAKES = [
