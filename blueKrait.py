@@ -26,9 +26,17 @@ class BlueKrait(Snake):
            * spisek koordinat vseh misk je self.field.mice.keys()
            * spisek vseh kac je self.field.snakes
         """
-           
-        if random.randint(0,10) < 5:
-            if random.randint(0,1) == 1:
-                self.turn_left()
-            else:
+
+        # Koordinate glave
+        (x,y) = self.coords[0]
+        # Smer gibanja
+        (sx,sy)=(self.dx, self.dy)
+
+        self.grow = 1
+
+        if not self.field.is_empty(x+sx,y+sy):
+            if random.randint(0,1)>0:
                 self.turn_right()
+            else:
+                self.turn_left()
+        
