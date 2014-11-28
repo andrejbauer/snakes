@@ -32,7 +32,7 @@ class BlueKrait(Snake):
         # Smer gibanja
         (sx,sy)=(self.dx, self.dy)
 
-        self.grow = 1
+        #self.grow = 1
 
         if not self.field.is_empty(x+sx,y+sy):
             if random.randint(0,1)>0:
