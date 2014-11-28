@@ -12,12 +12,14 @@ import random
 
 from bolivianAnaconda import BolivianAnaconda
 from congoWaterCobra import CongoWaterCobra
+from seaSnake import SeaSnake
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
 SNAKES = [
     BolivianAnaconda,
     CongoWaterCobra,
+    SeaSnake
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
