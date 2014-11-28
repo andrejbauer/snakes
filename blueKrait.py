@@ -2,8 +2,8 @@ import random
 from snake import *
 
 # Barva glave in repa
-COLOR_HEAD = 'blue'
-COLOR_TAIL = 'green'
+COLOR_HEAD = '#00FFF2'
+COLOR_TAIL = '#99FF00'
 
 class BlueKrait(Snake):
     def __init__(self, field, x, y, dx, dy):
