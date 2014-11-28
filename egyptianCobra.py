@@ -2,17 +2,17 @@ import random
 from snake import *
 
 # Barva glave in repa
-COLOR_HEAD = '#663300'
-COLOR_TAIL = '#308330'
+COLOR_HEAD = "green" 
+COLOR_TAIL = "blue" 
 
-class Bushmaster(Snake):
+class EgyptianCobra(Snake):
     def __init__(self, field, x, y, dx, dy):
         # Poklicemo konstruktor nadrazreda
         Snake.__init__(self,
             field = field,
             color_head = COLOR_HEAD,
             color_tail = COLOR_TAIL,
-            x = 5, y = 5, dx = dx, dy = dy)
+            x = x, y = y, dx = dx, dy = dy)
         # V konstruktor lahko dodate se kaksne atribute
 
     def turn(self):
@@ -25,9 +25,9 @@ class Bushmaster(Snake):
            * smer, v katero potuje je (self.dx, self.dy)
            * spisek koordinat vseh misk je self.field.mice.keys()
            * spisek vseh kac je self.field.snakes
-        """        
+        """
            
-        if random.randint(0,10) < 1:
+        if random.randint(0,10) < 5:
             if random.randint(0,1) == 1:
                 self.turn_left()
             else:
