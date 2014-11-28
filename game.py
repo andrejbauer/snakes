@@ -14,6 +14,8 @@ from bolivianAnaconda import BolivianAnaconda
 from congoWaterCobra import CongoWaterCobra
 from himehabu import himehabu
 from diamondPython import DiamondPython
+from grandCanyonRattlesnake import GrandCanyonRattlesnake
+from dwarfBoa import DwarfBoa
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
@@ -22,6 +24,8 @@ SNAKES = [
     CongoWaterCobra,
     himehabu,
     DiamondPython,
+    GrandCanyonRattlesnake,
+    DwarfBoa,
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
