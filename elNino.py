@@ -67,26 +67,25 @@ class ElNino(Snake):
 
         ne = self.shortest_path(graph, self.coords[0], goal)
         if ne == 'Screwed':
+            print('Scr')
             if len(self.coords) > 1:
                 del self.coords[-1]
+                del self.cells[-1]
             return
         lx, ly = -self.dy, self.dx
 
-        if random.randint(1, 2) == 1:
-            
-            if ne == vec_plus(self.coords[0], (self.dx, self.dy)):
-                pass # do nothing
-            elif ne == vec_plus(self.coords[0], (lx, ly)):
-                self.turn_left()
-            else:
+        if random.randint(1, 3) == 1:
+            if random.randint(1, 2) == 1:
                 self.turn_right()
+            else:
+                self.turn_left()
+    
+        if ne == vec_plus(self.coords[0], (self.dx, self.dy)):
+            pass # do nothing
+        elif ne == vec_plus(self.coords[0], (lx, ly)):
+            self.turn_left()
         else:
-            if ne == vec_plus(self.coords[0], (self.dx, self.dy)):
-                pass # do nothing
-            elif ne != vec_plus(self.coords[0], (lx, ly)):
-                self.turn_right()
-            else:
-                self.turn_left()
+            self.turn_right()
     
     def shortest_path(self, gr, beg, end):
         # print(gr)
