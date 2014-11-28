@@ -27,6 +27,7 @@ from CollettSnake import CollettSnake
 from boomslang import Boomslang
 from blueKrait import BlueKrait
 from nitschesTreeViper import NitschesTreeViper
+from egyptianCobra import EgyptianCobra
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
@@ -48,6 +49,8 @@ SNAKES = [
     Boomslang,
     BlueKrait,
     NitschesTreeViper,
+    Bushmaster,
+    EgyptianCobra,
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
