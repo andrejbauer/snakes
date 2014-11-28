@@ -11,6 +11,7 @@ import random
 # Svojo kaco dodate tako, da tu napisete ustrezni import
 
 from bolivianAnaconda import BolivianAnaconda
+from viper import Viper
 from congoWaterCobra import CongoWaterCobra
 from himehabu import himehabu
 from diamondPython import DiamondPython
@@ -33,6 +34,7 @@ from egyptianCobra import EgyptianCobra
 
 SNAKES = [
     BolivianAnaconda,
+    Viper,
     CongoWaterCobra,
     himehabu,
     DiamondPython,
