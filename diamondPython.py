@@ -26,7 +26,12 @@ class DiamondPython(Snake):
            * spisek koordinat vseh misk je self.field.mice.keys()
            * spisek vseh kac je self.field.snakes
         """
-           
+        vseMiske = list(self.field.mice.keys())
+        if len(vseMiske) > random.randint(0,500):
+            x,y = vseMiske.pop()
+            self.field.remove_mouse(x,y)
+
+
         if random.randint(0,8) < 6:
             if random.randint(0,1) == 1:
                 self.turn_left()
