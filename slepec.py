@@ -2,10 +2,10 @@ import random
 from snake import *
 
 # Barva glave in repa
-COLOR_HEAD = '#CC00CC'
-COLOR_TAIL = '#00FF00'
+COLOR_HEAD = "#00FF00"
+COLOR_TAIL = "#FF1493"
 
-class WolfSnake(Snake):
+class Slepec(Snake):
     def __init__(self, field, x, y, dx, dy):
         # Poklicemo konstruktor nadrazreda
         Snake.__init__(self,
@@ -26,10 +26,9 @@ class WolfSnake(Snake):
            * spisek koordinat vseh misk je self.field.mice.keys()
            * spisek vseh kac je self.field.snakes
         """
-
-        print(self.coords[0] ,self.dx,self.dy, self.field.width,self.field.height)
-        if self.coords[0][0]%2==0:
-            self.turn_left()
-        else:
-            self.turn_right()
-        
+           
+        if random.randint(0,10) < 5:
+            if random.randint(0,1) == 1:
+                self.turn_left()
+            else:
+                self.turn_right()
