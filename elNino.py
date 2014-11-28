@@ -3,7 +3,7 @@ from snake import *
 
 # Barva glave in repa
 COLOR_HEAD = '#009933'
-COLOR_TAIL = '#009933'
+COLOR_TAIL = '#FF00FF'
 
 class ElNino(Snake):
     def __init__(self, field, x, y, dx, dy):
