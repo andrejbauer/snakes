@@ -18,6 +18,7 @@ from congoWaterCobra import CongoWaterCobra
 SNAKES = [
     BolivianAnaconda,
     CongoWaterCobra,
+    ElNino
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
