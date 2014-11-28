@@ -21,7 +21,7 @@ SNAKES = [
     BolivianAnaconda,
     CongoWaterCobra,
     Bushmaster,
-    BolivianAnaconda,
+    EgyptianCobra,
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
