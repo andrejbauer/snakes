@@ -26,9 +26,39 @@ class MexicanVineSnake(Snake):
            * spisek koordinat vseh misk je self.field.mice.keys()
            * spisek vseh kac je self.field.snakes
         """
-           
-        if random.randint(0,10) < 5:
-            if random.randint(0,1) == 1:
+        koord=self.coords[0]
+        smer=(self.dx, self.dy)
+        polje=self.field
+        if smer==(0,-1):
+            if polje.is_empty( koord[0]+1, koord[1]):
+                self.turn_right()
+            elif polje.is_empty( koord[0]-1, koord[1]):
                 self.turn_left()
             else:
+                pass
+        if smer==(0,1):
+            if polje.is_empty(koord[0]+1, koord[1]):
+                self.turn_left()
+            elif polje.is_empty( koord[0]-1, koord[1]):
                 self.turn_right()
+            else:
+                pass
+        if smer==(-1,0):
+            if polje.is_empty( koord[0], koord[1]+1):
+                self.turn_right()
+            elif polje.is_empty( koord[0], koord[1]-1):
+                self.turn_left()
+            else:
+                pass
+        if smer==(1,0):
+            if polje.is_empty(koord[0], koord[1]+1):
+                self.turn_left()
+            elif polje.is_empty( koord[0], koord[1]-1):
+                self.turn_right()
+            else:
+                pass
+##        if random.randint(0,10) < 5:
+##            if random.randint(0,1) == 1:
+##                self.turn_left()
+##            else:
+##                self.turn_right()
