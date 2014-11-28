@@ -19,6 +19,8 @@ from dwarfBoa import DwarfBoa
 from wolfSnake import WolfSnake
 from seaSnake import SeaSnake
 from slepec import Slepec
+from mexicanVineSnake import MexicanVineSnake
+from bushmaster import Bushmaster
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
@@ -32,6 +34,8 @@ SNAKES = [
     WolfSnake,
     SeaSnake,
     Slepec,
+    MexicanVineSnake,
+    Bushmaster,
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
