@@ -39,7 +39,7 @@ class WolfSnake(Snake):
             if abs(x-tx)+abs(y-ty)<abs(x-mx)+abs(y-my):
                 mx=tx
                 my=ty
-        print(self.coords)
+        print("HAHA")
 
         #print(mx,my)
         if self.coords[0][0] < mx:
