@@ -2,7 +2,7 @@ import random
 from snake import *
 
 # Barva glave in repa
-COLOR_HEAD = 'red'
+COLOR_HEAD = 'green'
 COLOR_TAIL = 'brown'
 
 class Viper(Snake):
@@ -26,9 +26,13 @@ class Viper(Snake):
            * spisek koordinat vseh misk je self.field.mice.keys()
            * spisek vseh kac je self.field.snakes
         """
+            
            
-        if random.randint(0,10) < 5:
-            if random.randint(0,1) == 1:
-                self.turn_left()
+        if random.randint(0,5) < 5:
+            if (self.dx, self.dy) == self.field.mice.keys() or (self.dx, self.dy)==self.field.snakes:
+                    self.turn_left()
             else:
-                self.turn_right()
+                if random.randint(0,1) == 1:
+                    self.turn_left()
+                else:
+                    self.turn_right()
