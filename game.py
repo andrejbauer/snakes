@@ -13,6 +13,9 @@ import random
 from bolivianAnaconda import BolivianAnaconda
 from congoWaterCobra import CongoWaterCobra
 from blueKrait import BlueKrait
+from nitschesTreeViper import NitschesTreeViper
+
+>>>>>>> 2740c5bf8add32ea276b9fc1c1f39d3e13e306e7
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
@@ -20,6 +23,7 @@ SNAKES = [
     BolivianAnaconda,
     CongoWaterCobra,
 	BlueKrait,
+    NitschesTreeViper
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
