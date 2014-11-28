@@ -22,6 +22,8 @@ from seaSnake import SeaSnake
 from slepec import Slepec
 from mexicanVineSnake import MexicanVineSnake
 from bushmaster import Bushmaster
+from CollettSnake import CollettSnake
+
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
@@ -38,6 +40,7 @@ SNAKES = [
     Slepec,
     MexicanVineSnake,
     Bushmaster,
+    CollettSnake,
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
