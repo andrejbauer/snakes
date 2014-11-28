@@ -11,12 +11,14 @@ import random
 # Svojo kaco dodate tako, da tu napisete ustrezni import
 
 from bolivianAnaconda import BolivianAnaconda
+from viper import Viper
 from congoWaterCobra import CongoWaterCobra
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
 SNAKES = [
     BolivianAnaconda,
+    Viper,
     CongoWaterCobra,
 ]
 
