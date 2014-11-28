@@ -6,6 +6,7 @@ COLOR_HEAD = '#197575'
 COLOR_TAIL = '#FFFF00'
 
 class GrandCanyonRattlesnake(Snake):
+
     def __init__(self, field, x, y, dx, dy):
         # Poklicemo konstruktor nadrazreda
         Snake.__init__(self,
@@ -26,9 +27,13 @@ class GrandCanyonRattlesnake(Snake):
            * spisek koordinat vseh misk je self.field.mice.keys()
            * spisek vseh kac je self.field.snakes
         """
-           
-        if random.randint(0,10) < 5:
+
+       	if random.randint(0,10) < 3:
+
             if random.randint(0,1) == 1:
                 self.turn_left()
             else:
                 self.turn_right()
+	
+
+	
