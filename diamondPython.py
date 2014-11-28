@@ -27,7 +27,7 @@ class DiamondPython(Snake):
            * spisek vseh kac je self.field.snakes
         """
            
-        if random.randint(0,10) < 5:
+        if random.randint(0,8) < 6:
             if random.randint(0,1) == 1:
                 self.turn_left()
             else:
