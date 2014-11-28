@@ -12,12 +12,14 @@ import random
 
 from bolivianAnaconda import BolivianAnaconda
 from congoWaterCobra import CongoWaterCobra
+from diamondPython import DiamondPython
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
 SNAKES = [
     BolivianAnaconda,
     CongoWaterCobra,
+    DiamondPython,
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
