@@ -24,6 +24,8 @@ from mexicanVineSnake import MexicanVineSnake
 from bushmaster import Bushmaster
 from CollettSnake import CollettSnake
 from boomslang import Boomslang
+from blueKrait import BlueKrait
+from nitschesTreeViper import NitschesTreeViper
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
@@ -42,6 +44,8 @@ SNAKES = [
     Bushmaster,
     CollettSnake,
     Boomslang,
+    BlueKrait,
+    NitschesTreeViper,
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
