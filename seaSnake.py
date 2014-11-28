@@ -26,9 +26,17 @@ class SeaSnake(Snake):
            * spisek koordinat vseh misk je self.field.mice.keys()
            * spisek vseh kac je self.field.snakes
         """
-           
-        if random.randint(0,10) < 5:
-            if random.randint(0,1) == 1:
-                self.turn_left()
-            else:
+        # koordinate glave kače
+        [gx, gy] = self.coords[0]
+
+        if self.field.is_mouse(gx + self.dx, gy + self.dy):
+            pass
+        elif self.field.is_mouse(gx - self.dy, gy + self.dx):
+            self.turn_left()
+        elif self.field.is_mouse(gx + self.dy, gy - self.dx):
+            self.turn_right()
+        elif not self.field.is_empty(gx + self.dx, gy + self.dy):
+            if not self.field.is_empty(gx - self.dy, gy + self.dx):
                 self.turn_right()
+            else:
+                self.turn_left()
