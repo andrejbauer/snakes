@@ -15,6 +15,7 @@ from congoWaterCobra import CongoWaterCobra
 from himehabu import himehabu
 from diamondPython import DiamondPython
 from grandCanyonRattlesnake import GrandCanyonRattlesnake
+from kingCobra import KingCobra
 from dwarfBoa import DwarfBoa
 from elNino import ElNino
 from wolfSnake import WolfSnake
@@ -35,6 +36,7 @@ SNAKES = [
     himehabu,
     DiamondPython,
     GrandCanyonRattlesnake,
+    KingCobra,
     DwarfBoa,
     ElNino,
     WolfSnake,
