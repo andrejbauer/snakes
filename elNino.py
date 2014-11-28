@@ -67,9 +67,9 @@ class ElNino(Snake):
 
         ne = self.shortest_path(graph, self.coords[0], goal)
         if ne == 'Screwed':
-            print('Scr')
             if len(self.coords) > 1:
                 del self.coords[-1]
+                self.field.canvas.delete(self.cells[-1])
                 del self.cells[-1]
             return
         lx, ly = -self.dy, self.dx
@@ -103,7 +103,7 @@ class ElNino(Snake):
                 queue.append(v)
 
         if end not in parent:
-            return "Screwed"
+            return 'Screwed'
         path = [end]
         while path[-1] != beg:
             path.append(parent[path[-1]])

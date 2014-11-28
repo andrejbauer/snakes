@@ -17,7 +17,6 @@ class DwarfBoa(Snake):
         dx = 0
         dy = x%2
         dy = 1 if dy == 1 else -1
-        print(x, dy)
 
     def turn(self):
         """Igrica poklice metodo turn vsakic, preden premakne kaco. Kaca naj se tu odloci, ali se
@@ -34,7 +33,6 @@ class DwarfBoa(Snake):
         yH = self.coords[0][1]
         dx = self.dx
         dy = self.dy
-        print(xH,yH,dx,dy)
         if dx == 0:
             if xH%2 == 1:
                 self.dy = 1
@@ -43,10 +41,8 @@ class DwarfBoa(Snake):
 
             if yH == 28:
                 self.turn_right()
-                print(self.dx)
             if yH == 2:
                 self.turn_left()
-                print(self.dx)
         else:
             if yH == 28:
                 self.turn_right()

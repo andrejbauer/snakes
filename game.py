@@ -10,50 +10,49 @@ import random
 
 # Svojo kaco dodate tako, da tu napisete ustrezni import
 
+from CollettSnake import CollettSnake
+from blueKrait import BlueKrait
 from bolivianAnaconda import BolivianAnaconda
-from viper import Viper
+from boomslang import Boomslang
+from bushmaster import Bushmaster
 from congoWaterCobra import CongoWaterCobra
-from himehabu import himehabu
 from diamondPython import DiamondPython
-from grandCanyonRattlesnake import GrandCanyonRattlesnake
-from kingCobra import KingCobra
 from dwarfBoa import DwarfBoa
+from egyptianCobra import EgyptianCobra
 from elNino import ElNino
-from wolfSnake import WolfSnake
+from grandCanyonRattlesnake import GrandCanyonRattlesnake
+from himehabu import himehabu
+from kingCobra import KingCobra
+from mexicanVineSnake import MexicanVineSnake
+from nitschesTreeViper import NitschesTreeViper
 from seaSnake import SeaSnake
 from slepec import Slepec
-from mexicanVineSnake import MexicanVineSnake
-from bushmaster import Bushmaster
-from CollettSnake import CollettSnake
-from boomslang import Boomslang
-from blueKrait import BlueKrait
-from nitschesTreeViper import NitschesTreeViper
-from egyptianCobra import EgyptianCobra
+from viper import Viper
+from wolfSnake import WolfSnake
 
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
 SNAKES = [
+    BlueKrait,
     BolivianAnaconda,
-    Viper,
-    CongoWaterCobra,
-    himehabu,
-    DiamondPython,
-    GrandCanyonRattlesnake,
-    KingCobra,
-    DwarfBoa,
-    ElNino,
-    WolfSnake,
-    SeaSnake,
-    Slepec,
-    MexicanVineSnake,
+    Boomslang,
     Bushmaster,
     CollettSnake,
-    Boomslang,
-    BlueKrait,
-    NitschesTreeViper,
-    Bushmaster,
+    CongoWaterCobra,
+    DiamondPython,
+    DwarfBoa,
     EgyptianCobra,
+    ElNino,
+    GrandCanyonRattlesnake,
+    KingCobra,
+    MexicanVineSnake,
+    NitschesTreeViper,
+    SeaSnake,
+    Slepec,
+    Viper,
+    WolfSnake,
+    himehabu,
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
@@ -89,13 +88,13 @@ class SnakeGame():
         self.tick()
 
     def tick(self):
-        if self.time % 10 == 0:
+        if self.time % 4 == 0:
             self.field.new_mouse()
         for s in self.field.snakes:
             s.turn()
             s.move()
         self.time += 1
-        self.canvas.after(50, self.tick)
+        self.canvas.after(5, self.tick)
         
 # Glavni program
 root = Tk()

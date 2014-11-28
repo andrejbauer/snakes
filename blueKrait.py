@@ -32,8 +32,6 @@ class BlueKrait(Snake):
         # Smer gibanja
         (sx,sy)=(self.dx, self.dy)
 
-        self.grow = 1
-
         if not self.field.is_empty(x+sx,y+sy) and not self.field.is_mouse(x+sx,y+sy):
             self.turn_right()
         
