@@ -16,6 +16,7 @@ from himehabu import himehabu
 from diamondPython import DiamondPython
 from grandCanyonRattlesnake import GrandCanyonRattlesnake
 from dwarfBoa import DwarfBoa
+from elNino import ElNino
 from wolfSnake import WolfSnake
 from seaSnake import SeaSnake
 from slepec import Slepec
@@ -31,6 +32,7 @@ SNAKES = [
     DiamondPython,
     GrandCanyonRattlesnake,
     DwarfBoa,
+    ElNino,
     WolfSnake,
     SeaSnake,
     Slepec,
