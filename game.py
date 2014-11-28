@@ -16,6 +16,9 @@ from himehabu import himehabu
 from diamondPython import DiamondPython
 from grandCanyonRattlesnake import GrandCanyonRattlesnake
 from dwarfBoa import DwarfBoa
+from wolfSnake import WolfSnake
+from seaSnake import SeaSnake
+from slepec import Slepec
 
 # Nato v spisek SNAKES dodate razred, ki predstavlja vaso kaco
 
@@ -26,6 +29,9 @@ SNAKES = [
     DiamondPython,
     GrandCanyonRattlesnake,
     DwarfBoa,
+    WolfSnake,
+    SeaSnake,
+    Slepec,
 ]
 
 # Od tu naprej se ni treba nicesar dotikati
