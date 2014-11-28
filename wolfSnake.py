@@ -2,10 +2,10 @@ import random
 from snake import *
 
 # Barva glave in repa
-COLOR_HEAD = '#009933'
-COLOR_TAIL = '#FF00FF'
+COLOR_HEAD = '#CC00CC'
+COLOR_TAIL = '#00FF00'
 
-class ElNino(Snake):
+class WolfSnake(Snake):
     def __init__(self, field, x, y, dx, dy):
         # Poklicemo konstruktor nadrazreda
         Snake.__init__(self,
@@ -14,9 +14,6 @@ class ElNino(Snake):
             color_tail = COLOR_TAIL,
             x = x, y = y, dx = dx, dy = dy)
         # V konstruktor lahko dodate se kaksne atribute
-
-    def d(self, u, v):
-        return abs(u[0] - v[0]) + abs(u[1] - v[1])
 
     def turn(self):
         """Igrica poklice metodo turn vsakic, preden premakne kaco. Kaca naj se tu odloci, ali se
@@ -29,16 +26,7 @@ class ElNino(Snake):
            * spisek koordinat vseh misk je self.field.mice.keys()
            * spisek vseh kac je self.field.snakes
         """
-
-        # Choose closest item
-        dist = float('inf')
-        goal = None
-        for food in self.field.mice.keys():
-            if self.d(food, self.coords[0]) < dist:
-                dist = self.d(food, self.coords[0])
-                goal = food
-
-        print(self.field.width, self.field.hight)
+           
         if random.randint(0,10) < 5:
             if random.randint(0,1) == 1:
                 self.turn_left()
